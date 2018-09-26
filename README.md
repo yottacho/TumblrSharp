@@ -1,5 +1,19 @@
 ![status badge](https://ci.appveyor.com/api/projects/status/35487kj678vdpq6h/branch/master?svg=true)
 
+Changes from origin
+========
+forked from [piedoom/TumblrSharp](https://github.com/piedoom/TumblrSharp) v1.1.42.0
+
+`DontPanic.TumblrSharp.Client.TumblrClientWithoutApiKey` 클래스를 추가.
+
+api_key가 있으면 adult blog에서 오류가 발생하는 케이스가 발견되어 추가한 클래스로,
+`GetBlogInfoAsync`,
+`GetPostsAsync`#Tested,
+`GetPostAsync`,
+`GetBlogLikesAsync`,
+`GetTaggedPostsAsync`
+ 를 api_key를 사용하지 않도록 수정함.
+
 TumblrSharp
 ========
 

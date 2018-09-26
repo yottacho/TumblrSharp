@@ -46,6 +46,10 @@ namespace DontPanic.TumblrSharp
             {
                 return new TumblrClient(new HmacSha1HashProvider(), consumerKey, consumerSecret, oAuthToken) as TClient;
             }
+            else if (typeof(TClient) == typeof(TumblrClientWithoutApiKey))
+            {
+                return new TumblrClientWithoutApiKey(new HmacSha1HashProvider(), consumerKey, consumerSecret, oAuthToken) as TClient;
+            }
 
             throw new ArgumentException(String.Format("The provided type '{0}'cannot be created by this factory.", typeof(TClient).FullName));
         }
